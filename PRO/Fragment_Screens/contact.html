@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me - Jaga</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    .header {
+      text-align: center;
+      padding: 40px 20px 10px;
+    }
+    .header h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      text-shadow: 0 0 18px cyan;
+    }
+    .contact-container {
+      max-width: 950px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding: 30px;
+    }
+    .contact-info h2 {
+      color: #00e6e6;
+      margin-bottom: 18px;
+      font-size: 1.8rem;
+    }
+    .contact-info p {
+      margin-bottom: 12px;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+    .info-block {
+      margin-bottom: 25px;
+    }
+    .info-block h3 {
+      color: #ffdd00;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+    .info-block a, .info-block span {
+      display: block;
+      margin-bottom: 8px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 1rem;
+    }
+    .info-block a:hover {
+      color: #00e6e6;
+      text-shadow: 0 0 10px #00e6e6;
+    }
+    .social-links a {
+      display: inline-block;
+      margin: 10px 12px 0 0;
+      color: #fff;
+      font-size: 1.6rem;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      color: #00e6e6;
+      text-shadow: 0 0 10px #00e6e6;
+    }
+    form {
+      background: rgba(255,255,255,0.08);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,230,230,0.3);
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(0,0,0,0.5);
+    }
+    form input::placeholder, form textarea::placeholder {
+      color: #bbb;
+    }
+    form button {
+      margin-top: 10px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      background: #00e6e6;
+      color: #000;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    form button:hover {
+      background: #ff00ff;
+      color: #fff;
+      box-shadow: 0 0 15px #ff00ff;
+    }
+    /* Responsive */
+    @media(max-width: 768px) {
+      .contact-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .info-block a, .info-block span {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Contact Me</h1>
+  </div>
+
+  <div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>If you’d like to collaborate, discuss projects, or just say hi, feel free to reach out to me.</p>
+
+      <div class="info-block">
+        <h3>Phone & WhatsApp</h3>
+        <a href="https://wa.me/919861838508" target="_blank"><i class="fab fa-whatsapp"></i> +91 9861838508 (Primary)</a>
+        <a href="https://wa.me/919937386682" target="_blank"><i class="fab fa-whatsapp"></i> +91 9937386682 (Backup)</a>
+      </div>
+
+      <div class="info-block">
+        <h3>Email</h3>
+        <a href="mailto:jaga232006@gmail.com"><i class="fas fa-envelope"></i> jaga232006@gmail.com</a>
+        <a href="mailto:jaga57923@gmail.com"><i class="fas fa-envelope"></i> jaga57923@gmail.com</a>
+      </div>
+
+      <div class="info-block">
+        <h3>Social Links</h3>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jagabandhu-prusty-2b36ba331" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/jaga-lab" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/_junior_jaga" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://youtube.com/@jaga_ever" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <form action="send_message.php" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</body>
+</html>
