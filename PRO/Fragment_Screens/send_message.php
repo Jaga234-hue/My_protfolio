@@ -1,9 +1,9 @@
 <?php
 // DB credentials (from your snippet)
 $localhost = "localhost";
-$username  = "root";
-$password  = "Jaga2457";
-$database  = "protfolio_project";
+$username = "root";
+$password = "Jaga2457";
+$database = "protfolio_project";
 
 // Create connection
 $conn = new mysqli($localhost, $username, $password, $database);
@@ -17,8 +17,8 @@ if ($conn->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Gather and sanitize inputs
-    $name    = isset($_POST['name']) ? trim($_POST['name']) : '';
-    $email   = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $message = isset($_POST['message']) ? trim($_POST['message']) : '';
 
     // Basic validation
@@ -58,7 +58,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Default success redirect (change to your desired page)
-    header('Location: thankyou.html');
+
+    // your PHP form-processing code goes here
+
+    // instead of header('Location: thankyou.html');
+    echo "
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Thank You</title>
+  <script>
+    window.onload = function() {
+      alert('Thank you!');
+      window.location.href = 'index.html'; // redirect after popup
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
+";
+
+
     exit;
 } else {
     // Not a POST request
